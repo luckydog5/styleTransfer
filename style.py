@@ -3,6 +3,7 @@ import time
 import imutils
 import numpy as np
 def style_transfer(weights, image):
+    h,w,_ = image.shape
     net = cv2.dnn.readNetFromTorch(weights)
     #frame = cv2.imread(image)
     current_image = image.copy()
@@ -28,7 +29,7 @@ def style_transfer(weights, image):
     #style = weights.split('/')[-1].split('.')[0]
     #savename = image.split('/')[-1].split('.')[0] + '_' + style + '.jpg'
     #cv2.imwrite(savename, output, [int(cv2.IMWRITE_JPEG_QUALITY), 80])
-
+    output = cv2.resize(output, (w,h))
     return output
 
 if __name__ == '__main__':
