@@ -2,7 +2,7 @@ from style import style_transfer
 from PIL import Image, ImageEnhance
 import streamlit as st 
 import numpy as np 
-
+import os 
 
 def main():
     # 设置Streamlit应用程序的标题
@@ -46,4 +46,6 @@ def main():
         # 显示处理后的图片
         st.image(image, caption='Enhanced Image.', use_column_width=True)
 if __name__ == '__main__':
+    os.system('apt-get -y update')
+    os.system('apt-get -y install libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev freeglut3-dev')
     main()
