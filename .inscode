@@ -1,4 +1,4 @@
-run = "pip install -r requirements.txt;streamlit run main.py;apt-get update;apt-get install libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev freeglut3-dev"
+run = "apt-get -y update;apt-get -y install libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev freeglut3-dev;pip install -r requirements.txt;streamlit run main.py"
 language = "python"
 
 [packager]

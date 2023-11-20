@@ -46,6 +46,6 @@ def main():
         # 显示处理后的图片
         st.image(image, caption='Enhanced Image.', use_column_width=True)
 if __name__ == '__main__':
-    os.system('apt-get -y update')
-    os.system('apt-get -y install libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev freeglut3-dev')
+    #os.system('apt-get -y update')
+    #os.system('apt-get -y install libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev freeglut3-dev')
     main()
